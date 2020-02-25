@@ -1,16 +1,17 @@
 
 ## get started
 
-1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
-2. Open Terminal
-3. Go to your file project
-4. Run in terminal: ```npm install -g @angular/cli```
-5. Then: ```npm install```
-6. And: ```npm start```
+1. Download project with this command "git clone https://github.com/houssemchammakhi94/Product_Hunt_API_Implementation.git"
+2. Download NodeJs from [NodeJs Official Page](https://nodejs.org/en).
+3. Open Terminal
+4. Go to your file project
+5. Run in terminal: ```npm install -g @angular/cli```
+6. Then: ```npm install```
+7. And: ```npm start```
+ 
 
+## Usefull Informations
 
-## Informations Utiles
-
-_ src/app/api.service.ts _ contient l'appel de l'API PRDOCUT HUNT
-_ src/app/pages/table/ _ contient la page d'accueil qui va consommer le web service de "app/api.service.ts"
-_ src/environments/environment.ts _ contient les variables d'environnement tels que l'URL principale de l'api, le tokken, le port
+1. src/app/api.service.ts contient l'appel de l'API PRDOCUT HUNT
+2. src/app/pages/table/ contient la page d'accueil qui va consommer le web service de "app/api.service.ts"
+3. src/environments/environment.ts contient les variables d'environnement tels que l'URL principale de l'api, le tokken, le port
