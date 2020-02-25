@@ -7,5 +7,10 @@
 4. Run in terminal: ```npm install -g @angular/cli```
 5. Then: ```npm install```
 6. And: ```npm start```
-7. Navigate to: [http://localhost:4200/](http://localhost:4200/)
 
+
+## Informations Utiles
+
+_ src/app/api.service.ts _ contient l'appel de l'API PRDOCUT HUNT
+_ src/app/pages/table/ _ contient la page d'accueil qui va consommer le web service de "app/api.service.ts"
+_ src/environments/environment.ts _ contient les variables d'environnement tels que l'URL principale de l'api, le tokken, le port
