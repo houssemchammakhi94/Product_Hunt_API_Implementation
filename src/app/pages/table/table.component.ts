@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'app/api.service'
+import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -9,14 +10,20 @@ import { ApiService } from 'app/api.service'
 })
 
 export class TableComponent implements OnInit{
-    constructor(private api: ApiService) {}
+    model: NgbDateStruct;
+    date: {year: number, month: number};
+   
+    constructor(private api: ApiService,private calendar: NgbCalendar) {}
     posts: any;
-    ngOnInit(){
-        this.GetProducts();
+    ngOnInit(){ 
     }
+
     GetProducts(): void {
-        this.api.getData()
+        if(this.model==null)
+        {
+            this.model=this.calendar.getToday();    
+        }
+        this.api.getData(this.model)
           .subscribe(data => this.posts = data.posts); 
-          console.log(this.posts);
       }
 }

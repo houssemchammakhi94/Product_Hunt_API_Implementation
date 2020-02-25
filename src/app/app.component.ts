@@ -8,14 +8,11 @@ import { ApiService } from './api.service'
 })
 
 export class AppComponent implements OnInit {
-  posts: any;
-  constructor(private api: ApiService) {}
+
+  
   ngOnInit(): void {
-    this.GetProducts();
+    
   }
 
-  GetProducts(): void {
-    this.api.getData()
-      .subscribe(data => this.posts = data.posts); 
-  }
+  
 }

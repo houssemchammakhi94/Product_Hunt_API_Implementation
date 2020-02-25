@@ -7,11 +7,14 @@ import { environment } from 'environments/environment'
 export class ApiService {
 
   token = environment.tokken;
-  url: string = 'https://api.producthunt.com/v1/posts?day=2017-09-13';
+  urlApi= environment.url_api;
+  url: string;
   constructor(private http: HttpClient) {}
 
-  getData(): Observable<any> {
-    
+  getData(model): Observable<any> {
+ 
+    this.url=this.urlApi+"posts?day="+model.year+"-"+model.month+"-"+model.day;
+console.log(this.url);
     return this.http.get<any>(this.url, {
             headers :
             {

@@ -6,7 +6,7 @@
 export const environment = {
   production: false,
   port:4200,
-  url_api:"https://api.producthunt.com/",
+  url_api:"https://api.producthunt.com/v1/",
   tokken:"0O9w1USQlqkrklw4yeUXGWkVV_g36lFuqCbi0qP4KtE"
 
 };

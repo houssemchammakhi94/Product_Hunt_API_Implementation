@@ -2,8 +2,11 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-
-
+        <h4 class="card-title">Merci de choisir une date</h4>
+        <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+        <div>
+        <button class="btn btn-sm btn-outline-primary mr-2" (click)="GetProducts()">Afficher liste produits</button>
+      </div>
         <h4 class="card-title">Liste des produits</h4>
       </div>
       <div class="card-body">
@@ -58,7 +61,7 @@
               </div>
               <hr>
               <div class="stats">
-                <i class="fa fa-calendar"></i> Number of emails sent
+                <i class="fa fa-calendar"></i> Nombre de produits total
               </div>
             </div>
           </div>

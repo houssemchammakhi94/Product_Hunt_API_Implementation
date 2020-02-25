@@ -10,10 +10,10 @@ import Chart from 'chart.js';
 })
 
 export class DashboardComponent implements OnInit{
-  constructor(private api: ApiService) {}
+  
 
 
-  posts: any;
+  
   public canvas : any;
   public ctx;
   public chartColor;
@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit{
   public chartHours;
 
     ngOnInit(){
-      this.GetProducts();
+     
       this.chartColor = "#FFFFFF";
 
       this.canvas = document.getElementById("chartHours");
@@ -211,9 +211,5 @@ export class DashboardComponent implements OnInit{
         options: chartOptions
       });
     }
-    GetProducts(): void {
-      this.api.getData()
-        .subscribe(data => this.posts = data.posts); 
-        console.log(this.posts);
-    }
+   
 }
